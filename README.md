@@ -2,7 +2,7 @@
 
 ## 激活环境
 
-source ll_env/bin/activate
+`source ll_env/bin/activate`
 
 ## 添加环境激活脚本
 
