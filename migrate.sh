@@ -1,2 +1,2 @@
-python3 manage.py makemigrations learning_logs
+python3 manage.py makemigrations $1
 python3 manage.py migrate
