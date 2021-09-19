@@ -35,3 +35,11 @@ python3 manage.py migrate
 `heroku login -i`
 `heroku create`
 `git push heroku master`
+`heroku config:set DISABLE_COLLECTSTATIC=1`
+`heroku ps`
+`heroku open`
+`heroku run python3 manage.py migrate`
+
+## 参考
+
+[部署问题](https://stackoverflow.com/questions/36665889/collectstatic-error-while-deploying-django-app-to-heroku)
