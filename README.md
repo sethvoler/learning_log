@@ -29,3 +29,9 @@ python3 manage.py migrate
 ## 启动 Procfile 进程
 
 `heroku local`
+
+## 部署到 `heroku`
+
+`heroku login -i`
+`heroku create`
+`git push heroku master`
