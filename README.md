@@ -19,3 +19,13 @@ python3 manage.py migrate
 ## Django shell
 
 `python3 manage.py shell`
+
+## 创建包含包列表的文件 `requirements.txt`
+
+`pip freeze > requirements.txt`
+
+命令 `freeze` 让 `pip` 将项目中当前安装的所有包的名称都写入到文件 `requirements.txt` 中
+
+## 启动 Procfile 进程
+
+`heroku local`

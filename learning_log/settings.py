@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -138,3 +139,23 @@ LOGIN_URL = '/users/login/'
 BOOTSTRAP3 = {
     'include_jquery': True
 }
+
+# Heroku 环境设置
+if os.getcwd() == '/app':
+    import dj_database_url
+    DATABASES = {
+        'default': dj_database_url.config(default='postgree://localhost')
+    }
+
+    # 让request.is_secure()承认X-Forwarded-Proto头
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+    # 支持所有的主机头 (host header)
+    ALLOWED_HOSTS = ['*']
+
+    # 静态资产配置
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    STATIC_ROOT = 'staticfiles'
+    STATICFILES_DIRS = (
+        os.path.join(BASE_DIR, 'static'),
+    )
