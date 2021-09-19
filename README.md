@@ -40,6 +40,16 @@ python3 manage.py migrate
 `heroku open`
 `heroku run python3 manage.py migrate`
 
+## 创建超级用户
+
+`heroku run bash`
+`python manage.py createsuperuser`
+
+## 重命名URL
+
+`heroku apps:rename lvchabiao999`
+`heroku updated`
+
 ## 参考
 
 [部署问题](https://stackoverflow.com/questions/36665889/collectstatic-error-while-deploying-django-app-to-heroku)
