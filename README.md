@@ -50,6 +50,10 @@ python3 manage.py migrate
 `heroku apps:rename lvchabiao999`
 `heroku updated`
 
+## 删除项目
+
+`heroku apps:destroy --app appname`
+
 ## 参考
 
 [部署问题](https://stackoverflow.com/questions/36665889/collectstatic-error-while-deploying-django-app-to-heroku)
